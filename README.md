@@ -1,26 +1,26 @@
-# Diet plugin for CoffeeScript
+# Diet plugin for TypeScript
 
 ----
 
-Compiles CoffeeScript in Diet templates to JavaScript and caches the result.
+Compiles TypeScript in Diet templates to JavaScript and caches the result.
 
 ## Usage
 
-To register the plugin you have to `import diet_coffee;` in your application.
+To register the plugin you have to `import diet_typescript;` in your application.
 
 ```d
 import vibe.d;
-import diet_coffee;
+import diet_typescript;
 
 //...
 
 void hello(HTTPServerRequest req, HTTPServerResponse res)
 {
-    res.render!"coffee.dt"();
+    res.render!"typescript.dt"();
 }
 ```
 
-Now you can use the `:coffee` textfilter in your diet files.
+Now you can use the `:typescript` textfilter in your diet files.
 
 ```jade
 doctype html
@@ -28,8 +28,8 @@ html
   head
     title Hello, CoffeeScript
   body
-    :coffee
-      window.onload = -> alert document.title
+    :typescript
+      window.onload = () => alert(document.title);
 ```
 
-See [example](https://github.com/MartinNowak/diet-coffee/tree/master/example) for a complete vibe.d app.
+See [example](https://github.com/f/diet-typescript/tree/master/example) for a complete vibe.d app.
