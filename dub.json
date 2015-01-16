@@ -1,9 +1,9 @@
 {
-    "name": "diet-coffee",
-    "description": "Diet filter plugin for coffescript.",
-    "copyright": "Copyright © 2014 -, Martin Nowak",
+    "name": "diet-typescript",
+    "description": "Diet filter plugin for TypeScript.",
+    "copyright": "Copyright © 2015 -, Fatih Kadir Akin",
     "license": "MIT",
-    "authors": ["Martin Nowak"],
+    "authors": ["Fatih Kadir Akin", "Martin Nowak"],
     "dependencies": {
         "vibe-d": {"version": "~>0.7", "optional": true}
     },
