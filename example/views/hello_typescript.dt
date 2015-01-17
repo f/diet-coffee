@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    title Hello, CoffeeScript
+  body
+    :typescript
+      window.onload = () =>
+        var h = document.createElement('h1');
+        h.innerText = document.title;
+        document.body.appendChild(h);
