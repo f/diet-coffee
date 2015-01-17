@@ -1,4 +1,4 @@
-# Diet plugin for TypeScript
+# DLang Vibe.d Diet Plugin for TypeScript
 ![Screenshot](http://i.imgur.com/ehwuLWo.png)
 ----
 
