@@ -1,10 +1,20 @@
 doctype html
 html
   head
-    title Hello, CoffeeScript
+    title Hello, TypeScript
   body
     :typescript
-      window.onload = () =>
+      window.onload = () => {
         var h = document.createElement('h1');
         h.innerText = document.title;
         document.body.appendChild(h);
+      };
+
+    :typescript
+      class TypeCheckDemo {
+        constructor(id: number, name: string) {
+          console.log(id);
+        }
+      }
+
+      var typing = new TypeCheckDemo("hello", 1);
