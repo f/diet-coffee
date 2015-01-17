@@ -1,5 +1,5 @@
 # Diet plugin for TypeScript
-
+[Screenshot](http://i.imgur.com/ehwuLWo.png)
 ----
 
 Compiles TypeScript in Diet templates to JavaScript and caches the result.
@@ -29,7 +29,13 @@ html
     title Hello, TypeScript
   body
     :typescript
-      window.onload = () => alert(document.title);
+      class HelloWorld {
+        constructor(id: number, name: string) {
+           console.log("Hello world!");
+        }
+      }
+
+      var typing = new TypeCheckDemo("hello", 1);
 ```
 
 See [example](https://github.com/f/diet-typescript/tree/master/example) for a complete vibe.d app.
