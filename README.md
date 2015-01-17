@@ -1,5 +1,5 @@
 # Diet plugin for TypeScript
-[Screenshot](http://i.imgur.com/ehwuLWo.png)
+![Screenshot](http://i.imgur.com/ehwuLWo.png)
 ----
 
 Compiles TypeScript in Diet templates to JavaScript and caches the result.
