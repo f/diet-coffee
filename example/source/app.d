@@ -1,5 +1,5 @@
 import vibe.d;
-import diet_coffee; /// import diet_coffee to register filter
+import diet_typescript; /// import diet_typescript to register filter
 
 shared static this()
 {
@@ -13,5 +13,5 @@ shared static this()
 
 void hello(HTTPServerRequest req, HTTPServerResponse res)
 {
-    res.render!"hello_coffee.dt"();
+    res.render!"hello_typescript.dt"();
 }
