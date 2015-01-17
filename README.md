@@ -26,7 +26,7 @@ Now you can use the `:typescript` textfilter in your diet files.
 doctype html
 html
   head
-    title Hello, CoffeeScript
+    title Hello, TypeScript
   body
     :typescript
       window.onload = () => alert(document.title);
