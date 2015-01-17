@@ -1,22 +1,22 @@
-module diet_coffee;
+module diet_typescript;
 
 version (Have_vibe_d)
 {
     static this()
     {
         import vibe.templ.diet, std.functional;
-        registerDietTextFilter("coffee", &memoize!filterCoffee);
+        registerDietTextFilter("typescript", &memoize!filterCoffee);
     }
 }
 
-string filterCoffee(string script, size_t indent)
+string filterTypeScript(string script, size_t indent)
 in { assert(indent > 0); }
 body
 {
     version (Have_vibe_d)
     {
         import vibe.core.log;
-        logDebug("compiling coffee-script");
+        logDebug("compiling typescript");
     }
     import std.array, std.process;
 
@@ -43,6 +43,6 @@ body
 unittest
 {
     import std.algorithm;
-    assert(filterCoffee("3 + 2", 1).canFind("3 + 2"));
-    assert(filterCoffee("foo = (a) -> 2 * a", 1).canFind("foo = function(a)"));
+    assert(filterTypeScript("3 + 2", 1).canFind("3 + 2"));
+    assert(filterTypeScript("var foo = (a) => 2 * a", 1).canFind("foo = function (a)"));
 }
