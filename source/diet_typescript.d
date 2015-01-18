@@ -26,7 +26,7 @@ body
     string inputFile = "INLINE-TYPESCRIPT-" ~ to!string(partition) ~ ".ts";
     string outputFile = "/tmp/tsc-diet-compile-" ~ to!string(partition) ~ ".js";
     write(inputFile, script);
-    auto pipes = pipeShell("tsc " ~ inputFile ~ " --out " ~ outputFile, Redirect.stderrToStdout | Redirect.stdout);
+    auto pipes = pipeProcess(["tsc", inputFile, "--out", outputFile], Redirect.stderrToStdout | Redirect.stdout);
     scope(exit) wait(pipes.pid);
     foreach (line; pipes.stdout.byLine) logWarn(line.idup);
 
